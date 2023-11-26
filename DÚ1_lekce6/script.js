@@ -5,11 +5,14 @@ parseDate('12.03.2015'); // → { day: 12, month: 3, year: 2015 }
 parseDate('06.04.2021'); // → { day: 6, month: 4, year: 2021 }
 */
 
-const parseDate = prompt("Napište datum ve formátu DD.MM.YYYY")
-console.log(parseDate)
+const data = prompt("Napiště datum ve formátu DD.MM.YYYY")
 
-//document.body.innerHTML = `
-//<p> den: ${parseDate.slice(0, 2)}, měsíc: ${parseDate.slice(3, 5)}, rok: ${parseDate.slice(6, 10)} </p>
-//`
+parseDate = (data) => { 
+    const day = data.slice(0, 2)
+    const month = data.slice(3, 5)
+    const year = data.slice(6, 10)
+    const data1 = `day: ${day}, month: ${month}, year: ${year}`
+    return data1
+}
 
-console.log(parseDate)
+console.log(parseDate(data))
